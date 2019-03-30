@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import {ScrollView } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
@@ -18,13 +18,12 @@ class AlbumList extends Component {
         return this.state.albums.map(album => <AlbumDetail key={album.title} album={album}>Test</AlbumDetail>);
     }
     
-
     render() {
         console.log();
         return (
-            <View>
+            <ScrollView>
                 {this.renderAlbums()}
-            </View>
+            </ScrollView>
         );
     }
 }
